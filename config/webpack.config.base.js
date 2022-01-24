@@ -1,5 +1,5 @@
 const path = require('path');
-
+const { VueLoaderPlugin } = require("vue-loader");
 const { DIST, SRC, PUBLIC_PATH } = require('./pathMap');
 
 module.exports = {
@@ -10,6 +10,7 @@ module.exports = {
     publicPath: PUBLIC_PATH,
   },
   resolve: {
+    extensions: ['.vue', '.js', '.json'],
     modules: [SRC, 'node_modules'],
     alias: {
       '@': SRC,
@@ -17,6 +18,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        use: ['vue-loader']
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -28,5 +33,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new VueLoaderPlugin()
+  ],
 };

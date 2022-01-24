@@ -13,8 +13,10 @@
   "plugins": [
     "prettier"
   ],
-  "parser": "@babel/eslint-parser",
+  "parser": "vue-eslint-parser",
   "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
     "requireConfigFile": false,
     "babelOptions": {
       "configFile": "./.babelrc"

@@ -7,15 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config ./config/webpack.config.dev.js",
     "build": "webpack --config ./config/webpack.config.prod.js",
-    "lint": "eslint --fix src",
-    "lint:watch": "esw -w --fix src"
+    "lint": "eslint --fix src/**/*.{js,vue}",
+    "lint:watch": "esw -w --fix src/**/*.{js,vue}"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.12",
-    "@babel/eslint-parser": "^7.16.5",
     "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
     "@vue/compiler-sfc": "^3.2.29",
@@ -27,6 +26,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.3.0",
     "eslint-watch": "^8.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.5.0",

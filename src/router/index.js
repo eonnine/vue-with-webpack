@@ -1,10 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import { routes } from './routes';
+import { useGuards } from './navigationGuards';
+import routes from './routes';
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+useGuards(router);
 
 export { routes, router };

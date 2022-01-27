@@ -1,9 +1,9 @@
-import Home from '@/components/base/Home';
+import routeComponent from './routeComponent';
 
 const routes = [
   {
     path: '/',
-    component: Home,
+    component: routeComponent.Home,
   },
 ];
 
